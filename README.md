@@ -1,4 +1,9 @@
 # Orangehrm_tool
+
+Here volume was stored in hosting server at var folder.
+
+build command is: docker-compose up -d
+
 Environment variables
 
 The OrangeHRM instance can be customized by specifying environment variables on the first run. The following environment values are provided to custom OrangeHRM:
