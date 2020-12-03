@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  fix-mariadb-permissions:
+    image: 'bitnami/mariadb:latest'
+    user: root
+    command: chown -R 1001:1001 /bitnami
+    volumes:
+      - '/var/ta_hrm_tool/mariadb_data:/bitnami'
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - MARIADB_USER=ta_orangehrm
+      - MARIADB_DATABASE=ta_orange
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - '/var/ta_hrm_tool/mariadb_data:/bitnami'
+  orangehrm:
+    build: .
+    environment:
+      - MARIADB_HOST=mariadb
+      - MARIADB_PORT_NUMBER=3306
+      - ORANGEHRM_DATABASE_USER=ta_orangehrm
+      - ORANGEHRM_DATABASE_NAME=ta_orange
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '80:8181'
+      - '443:8143'
+    depends_on:
+      - mariadb
+    volumes:
+      - '/var/ta_hrm_tool/orangehrm_data:/bitnami'
+ 
