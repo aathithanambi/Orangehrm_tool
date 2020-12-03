@@ -2,6 +2,9 @@
 
 Here volume was stored in hosting server at var folder.
 
+    volumes:
+      - '/var/ta_hrm_tool/orangehrm_data:/bitnami'
+
 build command is: docker-compose up -d
 
 Environment variables
