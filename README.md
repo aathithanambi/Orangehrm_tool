@@ -1,11 +1,11 @@
 # Orangehrm_tool
 
-Here volume was stored in hosting server at var folder.
+Here volume is stored in the hosting server at var folder. So the data stored will not delete if container stopped or crashed. 
 
     volumes:
       - '/var/ta_hrm_tool/orangehrm_data:/bitnami'
 
-build command is: docker-compose up -d
+Build command is: docker-compose up -d
 
 # Environment variables
 
