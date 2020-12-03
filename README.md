@@ -7,7 +7,7 @@ Here volume was stored in hosting server at var folder.
 
 build command is: docker-compose up -d
 
-Environment variables
+# Environment variables
 
 The OrangeHRM instance can be customized by specifying environment variables on the first run. The following environment values are provided to custom OrangeHRM:
 User and Site configuration
@@ -15,7 +15,7 @@ User and Site configuration
     ORANGEHRM_USERNAME: OrangeHRM application username. Default: admin
     ORANGEHRM_PASSWORD: OrangeHRM application password. Default: Bitnami.12345
 
-Use an existing database
+# Use an existing database
 
     MARIADB_HOST: Hostname for MariaDB server. Default: mariadb
     MARIADB_PORT_NUMBER: Port used by MariaDB server. Default: 3306
@@ -24,7 +24,7 @@ Use an existing database
     ORANGEHRM_DATABASE_PASSWORD: Database password that OrangeHRM will use to connect with the database. No defaults.
     ALLOW_EMPTY_PASSWORD: It can be used to allow blank passwords. Default: no
 
-Create a database for OrangeHRM using mysql-client
+# Create a database for OrangeHRM using mysql-client
 
     MARIADB_HOST: Hostname for MariaDB server. Default: mariadb
     MARIADB_PORT_NUMBER: Port used by MariaDB server. Default: 3306
