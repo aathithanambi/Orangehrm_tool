@@ -7,7 +7,7 @@ We need to create the folder inside the var folder.
       - '/var/hrm_tool/orangehrm_data:/bitnami'
       - '/var/hrm_tool/mariadb_data:/bitnami'
 
-Build command is: docker-compose up -d
+Build command is: sudo docker-compose up -d
 
 # Environment variables
 
