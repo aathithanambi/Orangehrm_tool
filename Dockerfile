@@ -1,5 +1,6 @@
 FROM bitnami/orangehrm
-LABEL maintainer "aathi <aathi.skct@gmail.com>"
+LABEL maintainer "TA <services@techardors.com>"
+USER root
 
 ## Install 'vim'
 RUN install_packages vim

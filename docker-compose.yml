@@ -10,8 +10,8 @@ services:
   mariadb:
     image: 'bitnami/mariadb:latest'
     environment:
-      - MARIADB_USER=aathi_orangehrm
-      - MARIADB_DATABASE=aathi_orange
+      - MARIADB_USER=orangehrm
+      - MARIADB_DATABASE=orange
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - '/var/hrm_tool/mariadb_data:/bitnami'
@@ -20,12 +20,12 @@ services:
     environment:
       - MARIADB_HOST=mariadb
       - MARIADB_PORT_NUMBER=3306
-      - ORANGEHRM_DATABASE_USER=aathi_orangehrm
-      - ORANGEHRM_DATABASE_NAME=aathi_orange
+      - ORANGEHRM_DATABASE_USER=orangehrm
+      - ORANGEHRM_DATABASE_NAME=orange
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
-      - '80:8181'
-      - '443:8143'
+      - '8081:8181'
+      - '444:8143'
     depends_on:
       - mariadb
     volumes:
